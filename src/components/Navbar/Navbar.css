@@ -1,0 +1,104 @@
+.navbar {
+  width: 100%;
+  background-color: #0f171e;
+  padding: 10px 0;
+  position: relative;
+  z-index: 1000; /* ensure it’s above other content */
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  color: #00fbcf;
+  text-transform: uppercase;
+}
+
+/* NAV LIST DESKTOP */
+.nav-list {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
+
+.nav-list li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-list li a:hover {
+  color: #00fbcf;
+}
+
+/* ICONS */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  
+}
+
+.user-icon {
+  padding: 2px 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+
+}
+
+.menu-icon {
+  display: none;
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+}
+.log-in h2{
+    font-size: 15px;
+    color: #00fbcf;
+    left: 0;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 50px;
+    left: 200px;
+    
+    width: 40%;
+    background-color: #0f171e;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    display: none;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .nav-list li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-list li a {
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+  }
+
+}
